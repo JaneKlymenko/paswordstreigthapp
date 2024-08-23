@@ -1,7 +1,7 @@
 <main class="main">
   <div class="content">
-    <app-password></app-password>
+    <h2>You can check your password here</h2>
+    <app-password-input [formControl]="passwordControl"></app-password-input>
+    <app-strength-bar [passwordControl]="passwordControl"></app-strength-bar>
   </div>
 </main>
-
-<router-outlet />

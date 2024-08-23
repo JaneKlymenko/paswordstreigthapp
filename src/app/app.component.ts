@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { PasswordComponent } from './password/password.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+
+import { PasswordInputComponent } from './password-input/password-input.component';
+import { StrangthBarComponent } from './strangth-bar/strangth-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PasswordComponent],
+  imports: [PasswordInputComponent, StrangthBarComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Password straigth app';
+  passwordControl = new FormControl('');
 }
